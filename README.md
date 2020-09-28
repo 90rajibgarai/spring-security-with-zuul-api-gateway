@@ -1,4 +1,5 @@
 # spring-security-with-zuul-api-gateway
+
 Spring Security integration with Zuul API Gateway
 
 <img src="https://github.com/90rajibgarai/doc-important-links/blob/master/spring-security-with-zuul-api-gateway/api_gateway_application_diagram.png">
@@ -113,8 +114,8 @@ ii) Then double click on it. Then Select STS .exe file.
 iii) Then closed and restart STS.
 
 ------------------------------------------------------------------
-API'S SCREESHOTS:
------------------
+API's Screenshots:
+------------------
 
 <img src="https://github.com/90rajibgarai/doc-important-links/blob/master/spring-security-with-zuul-api-gateway/api_user_sign_in.JPG">
 
