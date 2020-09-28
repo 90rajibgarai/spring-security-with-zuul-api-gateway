@@ -1,0 +1,46 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: spring-gateway-server
+ribbon:
+  ReadTimeout: 60000
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 130000
+#eureka:
+#  instance:
+#    hostname: localhost
+#    port: 8761
+#  client:
+#    serviceUrl:
+#      defaultZone: http://${eureka.instance.hostname}:${eureka.instance.port}/eureka/
+#    instance:
+#      preferIpAddress: true
+
+
+zuul:
+  sensitiveHeaders: Cookie,Set-Cookie
+  ribbon:
+    eager-load:
+      enabled: true
+  routes:
+    springoauthserver:
+      sensitiveHeaders:
+      path: /oauth/**
+      stripPrefix: false
+      serviceId: spring-oauth-server   
+    productwebservice:
+      sensitiveHeaders:
+      path: /products/**
+      stripPrefix: false
+      serviceId: product-web-services
+    orderwebservice:
+      sensitiveHeaders:
+      path: /orders/**
+      stripPrefix: false
+      serviceId: order-web-services
